@@ -1,0 +1,57 @@
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_of_appointment %><br>
+    <%= f.date_select :date_of_appointment %>
+  </div>
+  <div class="field">
+    <%= f.label :pet %><br>
+    <%= f.text_field :pet %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br>
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :pet_type %><br>
+    <%= f.select :pet_type, options_for_select(['dog', 'cat', 'bird']) %>
+  </div>
+  <div class="field">
+    <%= f.label :breed %><br>
+    <%= f.text_field :breed %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :require_remainder_of_appointment %><br>
+    <%= f.check_box :require_remainder_of_appointment %>
+  </div>
+  <div class="field">
+    <%= f.label :reason_for_visit %><br>
+    <%= f.text_area :reason_for_visit %>
+  </div>
+  <div class="field">
+    <%= f.label :select_doctor %><br>
+    <%= f.select :doctor_id, options_for_select(Doctor.all.map {|o| [o.name,o.id]})%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

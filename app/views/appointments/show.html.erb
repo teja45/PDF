@@ -1,0 +1,57 @@
+<div class="main_left">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Date of appointment:</strong>
+    <%= @appointment.date_of_appointment %>
+  </p>
+
+  <p>
+    <strong>Pet:</strong>
+    <%= @appointment.pet %>
+  </p>
+
+  <p>
+    <strong>Customer:</strong>
+    <%= @appointment.customer %>
+  </p>
+
+  <p>
+    <strong>Pet type:</strong>
+    <%= @appointment.pet_type %>
+  </p>
+
+  <p>
+    <strong>Breed:</strong>
+    <%= @appointment.breed %>
+  </p>
+
+  <p>
+    <strong>Age:</strong>
+    <%= @appointment.age %>
+  </p>
+
+  <p>
+    <strong>Weight:</strong>
+    <%= @appointment.weight %>
+  </p>
+
+  <p>
+    <strong>Require remainder of appointment:</strong>
+    <%= @appointment.require_remainder_of_appointment %>
+  </p>
+
+  <p>
+    <strong>Reason for visit:</strong>
+    <%= @appointment.reason_for_visit %>
+  </p>
+
+  <p>
+    <strong>Doctor:</strong>
+    <%= @appointment.doctor_id %>
+  </p>
+</div>
+<div class="main_right">
+  <%= link_to 'Edit', edit_appointment_path(@appointment) %> </br>
+  <%= link_to 'List all appointments', appointments_path %>
+</div>

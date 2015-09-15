@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_of_appointment: 2015-09-15
+  pet: MyString
+  customer: MyString
+  pet_type: MyString
+  breed: MyString
+  age: 1
+  weight: 1.5
+  require_remainder_of_appointment: false
+  reason_for_visit: MyText
+  doctor_id: 1
+
+two:
+  date_of_appointment: 2015-09-15
+  pet: MyString
+  customer: MyString
+  pet_type: MyString
+  breed: MyString
+  age: 1
+  weight: 1.5
+  require_remainder_of_appointment: false
+  reason_for_visit: MyText
+  doctor_id: 1
